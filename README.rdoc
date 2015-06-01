@@ -1,28 +1,33 @@
-== README
+# demo-users-api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A little api for a demo
 
-Things you may want to cover:
+## Local Install
 
-* Ruby version
+Relies on ruby-2.1.5
 
-* System dependencies
+Setup `.env`:
 
-* Configuration
+```
+PORT=3000
+RACK_ENV=development
+```
 
-* Database creation
+And run:
 
-* Database initialization
+```
+gem install foreman
+bundle
+foreman start
+open localhost:3000
+```
 
-* How to run the test suite
+## Discover Routes
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rake routes
+```
 
-* Deployment instructions
+## Build
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+awesome.
