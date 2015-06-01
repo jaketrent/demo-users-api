@@ -10,10 +10,17 @@ module Api
         @user = User.new(user_params)
 
         if @user.save
-          render json: @user, status: :created, location: @book
+          render json: @user, status: :created, location: @user
         else
           render json: { not_ok: true } # TODO: serialize errors
         end
+      end
+
+      def destroy
+        @user = User.find(params[:id])
+        @user.destroy
+
+        head :no_content
       end
 
       private
