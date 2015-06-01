@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby "2.2.1"
 
 gem 'rails', '4.2.1'
 
@@ -11,7 +12,11 @@ gem 'pg'
 
 gem 'active_model_serializers', '0.8'
 
+gem 'puma'
 
+group :production do
+  gem 'rails_stdout_logging'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
