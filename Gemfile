@@ -14,6 +14,8 @@ gem 'jsonapi-resources'
 
 gem 'puma'
 
+gem 'rack-cors', :require => 'rack/cors'
+
 group :production do
   gem 'rails_stdout_logging'
 end
